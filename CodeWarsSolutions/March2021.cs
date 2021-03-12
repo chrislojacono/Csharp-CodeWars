@@ -80,3 +80,24 @@ public class Kata
           }
         }
     }
+
+//Write a function called repeat_str which repeats the given string src exactly count times.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Solution
+{
+  public static class Program
+  {
+    public static string repeatStr(int n, string s)
+    {
+      var finalString = new StringBuilder();
+      for(var i = 0; i < n; i++){
+        finalString.Append(s);
+      }
+      return finalString.ToString();
+    }
+  }
+}
