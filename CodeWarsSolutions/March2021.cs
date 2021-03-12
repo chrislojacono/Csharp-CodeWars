@@ -121,3 +121,107 @@ public class Kata
     return newList.Cast<int>().ToArray();
   }
 }
+
+/*
+In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+If anything in the text isn't a letter, ignore it and don't return it.
+
+"a" = 1, "b" = 2, etc. */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public static class Kata
+{
+  public static string AlphabetPosition(string text)
+  {
+    var finalString = new StringBuilder();
+    foreach(var cha in text){
+      switch(Char.ToLower(cha)){
+          case 'a':
+          finalString.Append("1 ");
+          break;
+          case 'b':
+          finalString.Append("2 ");
+          break;
+          case 'c':
+          finalString.Append("3 ");
+          break;
+          case 'd':
+          finalString.Append("4 ");
+          break;
+          case 'e':
+          finalString.Append("5 ");
+          break;
+          case 'f':
+          finalString.Append("6 ");
+          break;
+          case 'g':
+          finalString.Append("7 ");
+          break;
+          case 'h':
+          finalString.Append("8 ");
+          break;
+          case 'i':
+          finalString.Append("9 ");
+          break;
+          case 'j':
+          finalString.Append("10 ");
+          break;
+          case 'k':
+          finalString.Append("11 ");
+          break;
+          case 'l':
+          finalString.Append("12 ");
+          break;
+          case 'm':
+          finalString.Append("13 ");
+          break;
+          case 'n':
+          finalString.Append("14 ");
+          break;
+          case 'o':
+          finalString.Append("15 ");
+          break;
+          case 'p':
+          finalString.Append("16 ");
+          break;
+          case 'q':
+          finalString.Append("17 ");
+          break;
+          case 'r':
+          finalString.Append("18 ");
+          break;
+          case 's':
+          finalString.Append("19 ");
+          break;
+          case 't':
+          finalString.Append("20 ");
+          break;
+          case 'u':
+          finalString.Append("21 ");
+          break;
+          case 'v':
+          finalString.Append("22 ");
+          break;
+          case 'w':
+          finalString.Append("23 ");
+          break;
+          case 'x':
+          finalString.Append("24 ");
+          break;
+          case 'y':
+          finalString.Append("25 ");
+          break;
+          case 'z':
+          finalString.Append("26 ");
+          break;
+          default:
+          Console.WriteLine("invalid");
+          break;
+      }
+    }
+    return finalString.ToString().Trim();
+  }
