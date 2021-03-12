@@ -225,3 +225,26 @@ public static class Kata
     }
     return finalString.ToString().Trim();
   }
+
+
+  //An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+  using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class Kata
+{
+  public static bool IsIsogram(string str) 
+  {
+    var testString = new StringBuilder();
+    foreach(var cha in str){
+      if(testString.ToString().Contains(Char.ToLower(cha))){
+        return false;
+      }
+      testString.Append(cha);
+    }
+    return true;
+  }
+}
