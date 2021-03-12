@@ -63,3 +63,20 @@ public static class Kata
     return numbers.OrderBy(i => i).Take(2).Sum();
   }
 }
+
+
+//Very simple, given a number, find its opposite.
+using System;
+
+public class Kata
+    {
+        public  static int Opposite(int number)
+        {
+            if(number > 0){
+              return number * -1;
+            }
+          else{
+            return Math.Abs(number);
+          }
+        }
+    }
