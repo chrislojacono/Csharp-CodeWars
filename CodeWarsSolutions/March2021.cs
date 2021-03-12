@@ -108,3 +108,16 @@ Your goal in this kata is to implement a difference function, which subtracts on
 
 It should remove all values from list a, which are present in list b.
 */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class Kata
+{
+  public static int[] ArrayDiff(int[] a, int[] b)
+  {
+    var newList = a.Where((item) => !b.Contains(item));
+    return newList.Cast<int>().ToArray();
+  }
+}
