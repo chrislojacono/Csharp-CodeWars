@@ -63,3 +63,61 @@ public static class Kata
     return numbers.OrderBy(i => i).Take(2).Sum();
   }
 }
+
+
+//Very simple, given a number, find its opposite.
+using System;
+
+public class Kata
+    {
+        public  static int Opposite(int number)
+        {
+            if(number > 0){
+              return number * -1;
+            }
+          else{
+            return Math.Abs(number);
+          }
+        }
+    }
+
+//Write a function called repeat_str which repeats the given string src exactly count times.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Solution
+{
+  public static class Program
+  {
+    public static string repeatStr(int n, string s)
+    {
+      var finalString = new StringBuilder();
+      for(var i = 0; i < n; i++){
+        finalString.Append(s);
+      }
+      return finalString.ToString();
+    }
+  }
+}
+
+
+/*
+Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+It should remove all values from list a, which are present in list b.
+*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class Kata
+{
+  public static int[] ArrayDiff(int[] a, int[] b)
+  {
+    var newList = a.Where((item) => !b.Contains(item));
+    return newList.Cast<int>().ToArray();
+  }
+}
