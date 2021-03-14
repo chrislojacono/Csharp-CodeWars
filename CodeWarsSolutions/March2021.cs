@@ -275,3 +275,19 @@ public class Kata
     return Convert.ToInt32(finalString);
   }
 }
+
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class MinMax 
+{
+    public static int[] minMax(int[] lst) 
+    {
+        int[] finalArray = { lst.Min(), lst.Max() };
+        return finalArray;
+    }
+}
