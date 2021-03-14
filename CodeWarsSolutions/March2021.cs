@@ -259,3 +259,58 @@ public class Kata
     return str.ToLower().Distinct().Count()==str.Length;
   }
 }
+
+/* Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. */
+using System;
+using System.Linq;
+
+public class Kata
+{
+  public static int SquareDigits(int n)
+  {
+    var final = Convert.ToString(n).Select((x) => Convert.ToInt32(Char.GetNumericValue(x)) * Convert.ToInt32(Char.GetNumericValue(x)));
+    var finalString = string.Join("", final);
+    return Convert.ToInt32(finalString);
+  }
+}
+
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class MinMax 
+{
+    public static int[] minMax(int[] lst) 
+    {
+        int[] finalArray = { lst.Min(), lst.Max() };
+        return finalArray;
+    }
+}
+
+/*
+Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
+
+The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
+
+Note to Tax: not the invested principal is taxed, but only the year's accrued interest! */
+
+using System;
+
+public class Kata
+{
+  public static int CalculateYears(double principal, double interest,  double tax, double desiredPrincipal)
+        {
+          var years = 0;
+          var principalGain = principal;
+          for(var i = 0; principalGain < desiredPrincipal; i++){
+            principalGain += (principalGain * interest) - ((principalGain * interest) * tax);
+            years++;
+          }
+          return years;
+        }
+}
