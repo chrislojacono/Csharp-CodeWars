@@ -297,7 +297,7 @@ Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he w
 
 The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
 
-Note to Tax: not the invested principal is taxed, but only the year's accrued interest */
+Note to Tax: not the invested principal is taxed, but only the year's accrued interest! */
 
 using System;
 
