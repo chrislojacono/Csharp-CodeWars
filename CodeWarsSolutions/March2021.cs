@@ -336,3 +336,21 @@ namespace Solution
 
 //Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public static class Kata
+{
+  public static string ReverseWords(string str)
+  {
+    List<string> splitList = str.Split(" ").ToList();
+    List<string> catcher = new List<string>();
+    foreach(var s in splitList.ToList()){
+    var resultString = new string(s.ToCharArray().Reverse().ToArray());
+      catcher.Add(resultString);
+    }
+    string Something = string.Join(" ", catcher);
+    return Something;
+  }
+}
