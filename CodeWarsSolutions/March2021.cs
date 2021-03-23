@@ -354,3 +354,19 @@ public static class Kata
     return Something;
   }
 }
+
+using System;
+using System.Collections.Generic;
+
+public static class JadenCase
+{
+  public static string ToJadenCase(this string phrase)
+  {
+    var splitString = phrase.Split(" ");
+    var finalList = new List<string>();
+    foreach(var word in splitString){
+      finalList.Add(char.ToUpper(word[0]) + word.Substring(1));
+    }
+    return String.Join(" ", finalList);
+  }
+}
