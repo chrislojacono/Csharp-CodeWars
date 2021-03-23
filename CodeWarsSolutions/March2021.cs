@@ -394,3 +394,20 @@ function componentToHex(c) {
 function rgb(r, g, b){
   return  componentToHex(r).toUpperCase() + componentToHex(g).toUpperCase() + componentToHex(b).toUpperCase();
 }
+
+
+//Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+function pigIt(str){
+  let splitString = str.split(" ")
+  let newArray = [];
+  splitString.forEach((word) => {
+    if(word == "?" || word == "!"){
+      newArray.push(word)
+    }
+    else{
+    let firstLetter = word[0];
+    newArray.push(word.slice(1) + firstLetter + "ay")
+    }
+  })
+ return newArray.join(" ")
+}
