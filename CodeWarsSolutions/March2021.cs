@@ -367,4 +367,59 @@ public static class Kata
   {
     return int.Parse(string.Concat(num.ToString().OrderByDescending(x => x)));
   }
+using System;
+using System.Collections.Generic;
+
+public static class JadenCase
+{
+  public static string ToJadenCase(this string phrase)
+  {
+    var splitString = phrase.Split(" ");
+    var finalList = new List<string>();
+    foreach(var word in splitString){
+      finalList.Add(char.ToUpper(word[0]) + word.Substring(1));
+    }
+    return String.Join(" ", finalList);
+  }
+}
+
+/*
+The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+
+Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+
+The following are examples of expected output values:*/
+
+function componentToHex(c) {
+    if(c > 255){
+    return "FF"
+  }
+  var hex = c.toString(16);
+  if(hex < 0){
+    return "00"
+  }
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+
+
+function rgb(r, g, b){
+  return  componentToHex(r).toUpperCase() + componentToHex(g).toUpperCase() + componentToHex(b).toUpperCase();
+}
+
+
+//Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+function pigIt(str){
+  let splitString = str.split(" ")
+  let newArray = [];
+  splitString.forEach((word) => {
+    if(word == "?" || word == "!"){
+      newArray.push(word)
+    }
+    else{
+    let firstLetter = word[0];
+    newArray.push(word.slice(1) + firstLetter + "ay")
+    }
+  })
+ return newArray.join(" ")
 }
