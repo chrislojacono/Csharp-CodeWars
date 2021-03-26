@@ -359,17 +359,12 @@ public static class Kata
 //Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 public static class Kata
 {
   public static int DescendingOrder(int num)
   {
-    var stringNum = num.ToString();
-    var stringList = stringNum.Split("").OrderBy(x => x).ToArray();
-    var reversedArray = stringList.Reverse();
-    var numString = string.Join("", stringList);
-    return Int32.Parse(numString);
+    return int.Parse(string.Concat(num.ToString().OrderByDescending(x => x)));
   }
 }
