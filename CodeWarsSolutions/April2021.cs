@@ -1,6 +1,6 @@
 //APRIL C# SOLUTIONS!!
 
-//Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
+// Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
 
 public class Kata
 {
