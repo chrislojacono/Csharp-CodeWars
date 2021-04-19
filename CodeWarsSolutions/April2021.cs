@@ -25,3 +25,12 @@ public static class Kata
      return input.ToLower().Count(i => i == 'x') == input.ToLower().Count(i => i == 'o');
   }
 }
+public class Solution {
+    public int Reverse(int x) {
+        var reversed = x.ToString().Reverse().Aggregate(0, (b, x) => 10 * b + x - '0');
+        if (reversed > 2147483647){
+            return 0;
+        } 
+        return reversed;
+    }
+}
