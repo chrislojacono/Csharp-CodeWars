@@ -58,3 +58,20 @@ public class Solution {
         return true;
     }
 }
+
+    static long repeatedString(string s, long n) {
+        var repeatingList = new List<char>();
+        var aCount = 0;
+        while(repeatingList.Count() <= n){
+            for(var i = 0; i < s.Count() && repeatingList.Count() <= n; i++){
+               repeatingList.Add(s[i]); 
+            }
+        }
+        foreach(var charac in repeatingList){
+            Console.WriteLine(charac);
+            if(charac == 'a'){
+                aCount++;
+            }
+        }
+        return aCount;
+    }
