@@ -34,3 +34,27 @@ public class Solution {
         return reversed;
     }
 }
+
+
+//Given an integer x, return true if x is palindrome integer.
+
+//An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
+
+public class Solution {
+    public bool IsPalindrome(int x) {
+        if(x < 0){
+            return false;
+        }
+        var listOfDigits = x.ToString().ToCharArray().Select(c => (int) c).ToList();
+        var firstIndex = 0;
+        var secondIndexer = listOfDigits.Count() - 1;
+        while(firstIndex < secondIndexer){
+            if(listOfDigits[firstIndex] != listOfDigits[secondIndexer]){
+                return false;
+            }
+            firstIndex++;
+            secondIndexer--;
+        }
+        return true;
+    }
+}
