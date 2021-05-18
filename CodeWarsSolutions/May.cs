@@ -15,3 +15,25 @@ public String LongestCommonPrefix(String[] strs) {
     return strs[0];
   }
 }
+
+    public static int countingValleys(int steps, string path)
+    {
+        var valleys = 0;
+        var altitude = 0;
+        var previousAlt = 0;
+        var listPath = path.ToCharArray();
+        var backAboveSeaLevel = true;
+        for(var i = 0; i < steps; i++){
+            previousAlt = altitude;
+            if(listPath[i] == 'D'){
+                altitude--;
+            }
+            else if(listPath[i] == 'U'){
+                altitude++;
+            }
+            if(previousAlt == 0 && altitude == -1){
+                valleys++;
+            }
+        }
+        return valleys;
+    }
