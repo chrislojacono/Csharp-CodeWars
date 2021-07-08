@@ -8,3 +8,5 @@ From Person P
 SELECT MAX(Salary) as SecondHighestSalary 
 FROM Employee WHERE Salary 
 NOT IN (SELECT MAX(Salary) FROM Employee);
+
+/* Find all emails that exist in a column more than once*/
