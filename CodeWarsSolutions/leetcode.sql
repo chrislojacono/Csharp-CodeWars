@@ -3,3 +3,5 @@ Select P.FirstName, P.LastName, A.City, A.State
 From Person P
         left Join Address A
         on (P.PersonId = A.PersonId)
+
+/*Write a SQL query to get the second highest salary from the Employee table. */
