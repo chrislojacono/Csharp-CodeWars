@@ -5,3 +5,6 @@ From Person P
         on (P.PersonId = A.PersonId)
 
 /*Write a SQL query to get the second highest salary from the Employee table. */
+SELECT MAX(Salary) as SecondHighestSalary 
+FROM Employee WHERE Salary 
+NOT IN (SELECT MAX(Salary) FROM Employee);
