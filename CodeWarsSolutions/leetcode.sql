@@ -14,3 +14,5 @@ Select Email
 From Person
 Group by Email
 Having Count(Email) > 1
+
+/* Given the Employee table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.*/
