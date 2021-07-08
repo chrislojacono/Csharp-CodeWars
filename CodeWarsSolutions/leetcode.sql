@@ -23,3 +23,7 @@ From Employee E
 Where M.Salary < E.Salary
 
 /* Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.*/
+Select C.Name as Customers
+From Customers C
+Where Not Exists(Select * from Orders O
+                Where C.Id = O.CustomerId)
