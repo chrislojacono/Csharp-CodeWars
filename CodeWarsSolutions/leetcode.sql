@@ -10,3 +10,7 @@ FROM Employee WHERE Salary
 NOT IN (SELECT MAX(Salary) FROM Employee);
 
 /* Find all emails that exist in a column more than once*/
+Select Email
+From Person
+Group by Email
+Having Count(Email) > 1
