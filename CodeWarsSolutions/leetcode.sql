@@ -21,3 +21,5 @@ From Employee E
  Join Employee  M
  on M.id = E.ManagerId
 Where M.Salary < E.Salary
+
+/* Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.*/
