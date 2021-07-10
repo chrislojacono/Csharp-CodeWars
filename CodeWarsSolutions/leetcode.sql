@@ -27,3 +27,7 @@ Select C.Name as Customers
 From Customers C
 Where Not Exists(Select * from Orders O
                 Where C.Id = O.CustomerId)
+
+-- Write an SQL query to find all dates' id with higher temperature compared to its previous dates (yesterday). IN MYSQL
+SELECT t.Id FROM Weather AS t, Weather AS y
+WHERE DATEDIFF(t.RecordDate, y.RecordDate) = 1 AND t.Temperature > y.Temperature;
